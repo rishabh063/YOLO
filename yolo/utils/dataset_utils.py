@@ -23,7 +23,7 @@ def locate_label_paths(dataset_path: str, phase_name: str):
     """
     json_labels_path = path.join(dataset_path, "annotations", f"instances_{phase_name}.json")
 
-    txt_labels_path = path.join(dataset_path, "labels", phase_name)
+    txt_labels_path = path.join(dataset_path,phase_name, "labels")
 
     if path.isfile(json_labels_path):
         return json_labels_path, "json"
