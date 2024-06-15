@@ -74,7 +74,7 @@ class YoloDataset(Dataset):
         Returns:
             list: A list of tuples, each containing the path to an image file and its associated segmentation as a tensor.
         """
-        images_path = path.join(dataset_path, "images", phase_name)
+        images_path = path.join(dataset_path, phase_name ,"images")
         labels_path, data_type = locate_label_paths(dataset_path, phase_name)
         images_list = sorted(os.listdir(images_path))
         if data_type == "json":
